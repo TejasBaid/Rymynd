@@ -1,0 +1,93 @@
+name: Rymynd
+options:
+  bundleIdPrefix: com.rymynd
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+  developmentLanguage: en
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: C6RCPR99J8
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+targets:
+  Rymynd:
+    type: application
+    platform: iOS
+    sources:
+      - path: Rymynd
+      - path: Shared
+    dependencies:
+      - target: RymyndWidgets
+        embed: true
+    entitlements:
+      path: Rymynd/Resources/Rymynd.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.rymynd.app
+        com.apple.developer.usernotifications.time-sensitive: true
+    info:
+      path: Rymynd/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: Rymynd
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSSupportsLiveActivities: true
+        CFBundleURLTypes:
+          - CFBundleURLName: com.rymynd.app
+            CFBundleURLSchemes:
+              - rymynd
+        NSAlarmKitUsageDescription: "Rymynd rings like an alarm for reminders you mark as can't-miss, even in Silent mode or Focus."
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rymynd.app
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.productivity
+  RymyndWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: RymyndWidgets
+      - path: Shared
+    entitlements:
+      path: RymyndWidgets/RymyndWidgets.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.rymynd.app
+    info:
+      path: RymyndWidgets/Info.plist
+      properties:
+        CFBundleDisplayName: Rymynd
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        NSSupportsLiveActivities: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rymynd.app.widgets
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) WIDGET_EXTENSION"
+        TARGETED_DEVICE_FAMILY: "1"
+        SKIP_INSTALL: YES
+schemes:
+  Rymynd:
+    build:
+      targets:
+        Rymynd: all
+        RymyndWidgets: all
+    run:
+      config: Debug
