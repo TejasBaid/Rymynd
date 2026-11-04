@@ -1,5 +1,6 @@
 #if DEBUG
-import Foundation
+import SwiftUI
+import WidgetKit
 
 /// Debug-only launch arguments for screenshots and manual QA:
 /// `-skipOnboarding`, `-resetOnboarding`, `-seedDemo`, `-openWizard`, `-openSettings`,
@@ -49,6 +50,43 @@ enum DemoSupport {
             records.append(CompletionRecord(snapshot: Reminder(title: "Stretch", tint: .mint, symbol: "figure.run"), completedAt: date))
         }
         return records
+    }
+}
+/// Renders the Home and Lock Screen widgets at their real sizes, for screenshots (`-widgetGallery`).
+struct WidgetGallery: View {
+    var body: some View {
+        let entries = [FeedEntry(date: .now, next: ReminderFeed.next()), FeedEntry(date: .now, next: nil)]
+        ZStack {
+            LinearGradient(colors: [Color(white: 0.32), Color(white: 0.12)], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            VStack(spacing: 22) {
+                ForEach(entries.indices, id: \.self) { index in
+                    TodayLineView(entry: entries[index])
+                        .font(.system(size: 17, weight: .semibold))
+                        .foregroundStyle(.white.opacity(0.85))
+                        .lineLimit(1)
+                        .frame(width: 240)
+                }
+                Text("9:41")
+                    .font(.system(size: 92, weight: .bold, design: .rounded))
+                    .foregroundStyle(.white.opacity(0.85))
+                    .padding(.bottom, 20)
+                HStack(spacing: 22) {
+                    widget(ComposeWidgetView(entry: entries[0], family: .systemSmall), width: 170)
+                    widget(ComposeWidgetView(entry: entries[1], family: .systemSmall), width: 170)
+                }
+                widget(ComposeWidgetView(entry: entries[0], family: .systemMedium), width: 364)
+                widget(ComposeWidgetView(entry: entries[1], family: .systemMedium), width: 364)
+            }
+        }
+    }
+
+    private func widget(_ content: some View, width: CGFloat) -> some View {
+        content
+            .padding(16)
+            .frame(width: width, height: 170)
+            .background(Color(red: 0.024, green: 0.027, blue: 0.035))
+            .clipShape(.rect(cornerRadius: 24, style: .continuous))
     }
 }
 #endif

@@ -1,5 +1,6 @@
 import Foundation
 import Observation
+import WidgetKit
 
 /// The single source of truth. Lives on the main actor; persists to JSON in the App Group container
 /// and asks the delivery coordinator to reconcile notifications, Live Activities and alarms after every change.
@@ -14,7 +15,7 @@ final class ReminderStore {
     /// Set when a reminder is created, so views can celebrate it once.
     var lastCreatedID: UUID?
 
-    @ObservationIgnored private let fileURL = AppGroup.containerURL.appending(path: "rymynd-store.json")
+    @ObservationIgnored private let fileURL = ReminderFeed.fileURL
     @ObservationIgnored private let encoder: JSONEncoder = {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
@@ -210,6 +211,7 @@ final class ReminderStore {
             try? data.write(to: fileURL, options: [.atomic])
         }
         DeliveryCoordinator.shared.setNeedsSync()
+        WidgetCenter.shared.reloadAllTimelines()
     }
 
     private func pruneHistory(now: Date) {

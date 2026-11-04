@@ -17,6 +17,7 @@ struct HomeView: View {
     @State private var landingTarget: TitleTarget?
     @State private var scrollRequest: UUID?
     @State private var viewport: CGRect = .zero
+    @State private var openSwipeID: UUID?
 
     var body: some View {
         TimelineView(.everyMinute) { context in
@@ -65,6 +66,21 @@ struct HomeView: View {
             }
         }
         #endif
+        .onChange(of: router.composeRequest, initial: true) { _, request in
+            guard let request else { return }
+            router.composeRequest = nil
+            showSettings = false
+            wizard = nil
+            if composer.isEngaged { composer.dismiss() }
+            Task { @MainActor in
+                // Let any sheet finish leaving (and the app finish launching) before taking focus.
+                try? await Task.sleep(for: .milliseconds(450))
+                switch request.mode {
+                case .type: composer.focusRequest += 1
+                case .wizard: wizard = .new
+                }
+            }
+        }
         .onChange(of: router.focusedReminderID) { _, id in
             guard let id else { return }
             flash(id)
@@ -123,6 +139,9 @@ struct HomeView: View {
             .scrollIndicators(.hidden)
             .scrollDismissesKeyboard(.interactively)
             .scrollEdgeEffectStyle(.hard, for: .top)
+            .onScrollPhaseChange { _, phase in
+                if phase == .interacting, openSwipeID != nil { openSwipeID = nil }
+            }
             .scrollEdgeEffectStyle(.soft, for: .bottom)
             .onScrollGeometryChange(for: Bool.self) { geometry in
                 geometry.contentOffset.y + geometry.contentInsets.top > 70
@@ -219,6 +238,7 @@ struct HomeView: View {
                             onComplete: { complete(reminder) },
                             onOpen: { wizard = .edit(reminder) }
                         )
+                        .swipeToDelete(id: reminder.id, openID: $openSwipeID) { delete(reminder) }
                         .id(reminder.id)
                         .contextMenu { menu(for: reminder) }
                         .transition(.asymmetric(

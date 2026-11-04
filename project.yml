@@ -83,6 +83,18 @@ targets:
         SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) WIDGET_EXTENSION"
         TARGETED_DEVICE_FAMILY: "1"
         SKIP_INSTALL: YES
+  RymyndUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: RymyndUITests
+    dependencies:
+      - target: Rymynd
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rymynd.app.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TARGETED_DEVICE_FAMILY: "1"
 schemes:
   Rymynd:
     build:
@@ -91,3 +103,7 @@ schemes:
         RymyndWidgets: all
     run:
       config: Debug
+    test:
+      config: Debug
+      targets:
+        - RymyndUITests

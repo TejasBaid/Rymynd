@@ -34,6 +34,7 @@ struct ComposerDock: View {
         }
         .animation(Motion.smooth, value: model.phase)
         .animation(Motion.smooth, value: focused)
+        .onChange(of: model.focusRequest) { _, _ in focused = true }
         .onChange(of: focused) { _, isFocused in
             model.isFocused = isFocused
             if isFocused { intelligence.prewarm() }

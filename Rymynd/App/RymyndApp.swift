@@ -31,6 +31,14 @@ final class AppRouter {
     static let shared = AppRouter()
     /// A reminder to scroll to and highlight (e.g. after tapping its notification).
     var focusedReminderID: UUID?
+    /// A request to start a new reminder (from the Home Screen widget).
+    var composeRequest: ComposeRequest?
+}
+
+struct ComposeRequest: Equatable {
+    enum Mode { case type, wizard }
+    let mode: Mode
+    let id = UUID()
 }
 
 final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -81,6 +89,19 @@ struct RootView: View {
 
     var body: some View {
         ZStack {
+            #if DEBUG
+            if DemoSupport.has("-widgetGallery") {
+                WidgetGallery()
+            } else if hasOnboarded {
+                HomeView()
+                    .transition(.asymmetric(insertion: .softBlur.animation(.smooth(duration: 0.9).delay(0.15)), removal: .opacity))
+            } else {
+                OnboardingView {
+                    withAnimation(.smooth(duration: 0.7)) { hasOnboarded = true }
+                }
+                .transition(.opacity.combined(with: .scale(scale: 1.04)))
+            }
+            #else
             if hasOnboarded {
                 HomeView()
                     .transition(.asymmetric(insertion: .softBlur.animation(.smooth(duration: 0.9).delay(0.15)), removal: .opacity))
@@ -90,13 +111,22 @@ struct RootView: View {
                 }
                 .transition(.opacity.combined(with: .scale(scale: 1.04)))
             }
+            #endif
         }
         .background(Color.canvas.ignoresSafeArea())
         .onOpenURL { url in
-            // rymynd://reminder/<id> — from a Live Activity tap.
-            guard url.scheme == "rymynd", url.host() == "reminder",
-                  let id = UUID(uuidString: url.lastPathComponent) else { return }
-            AppRouter.shared.focusedReminderID = id
+            guard url.scheme == "rymynd" else { return }
+            switch url.host() {
+            case "reminder":
+                // rymynd://reminder/<id> — from a Live Activity or widget tap.
+                guard let id = UUID(uuidString: url.lastPathComponent) else { return }
+                AppRouter.shared.focusedReminderID = id
+            case "new":
+                // rymynd://new (type it) or rymynd://new/wizard — from the Home Screen widget.
+                AppRouter.shared.composeRequest = ComposeRequest(mode: url.lastPathComponent == "wizard" ? .wizard : .type)
+            default:
+                break
+            }
         }
         .onChange(of: scenePhase, initial: true) { _, phase in
             guard phase == .active else { return }

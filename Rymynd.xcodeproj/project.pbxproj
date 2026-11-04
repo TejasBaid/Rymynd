@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022CD6AC15E9F56159240C10 /* ReminderFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68ED9C2A94FAE63742BE51 /* ReminderFeed.swift */; };
 		0926E391D8572D5BB9019164 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B73BF9E9FA909FC923C48 /* Theme.swift */; };
+		0ACCE49B156C40B700CA61CE /* SwipeToDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757A8CAF23D13EE8D26A4947 /* SwipeToDelete.swift */; };
 		0CC410F9A75C427D33DDFB67 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61EA3EDAE943C8378B9678 /* Haptics.swift */; };
 		0D3826C02FB3439F58619826 /* ComposerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C50DE824A53906F2CA8458 /* ComposerModel.swift */; };
 		11040DB34782F219519A0E85 /* ActivityViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029055B063A8BB806938DD2 /* ActivityViews.swift */; };
@@ -23,9 +25,13 @@
 		44C54AEFAC173F78521A85FD /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33117A6120C68F1A48DAC93E /* NotificationScheduler.swift */; };
 		46011DB8C155AF9FD296BC94 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5687AFE013690707726D3187 /* Palette.swift */; };
 		4E97440D72A5E7411AAD6486 /* QuickTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5190FC02E15BB597F3538181 /* QuickTimes.swift */; };
+		58A238DFEE33DE437C3903F4 /* HomeWidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB29F1E4E1E65701389F80 /* HomeWidgetViews.swift */; };
 		59AA12971717F7EA8FAADD13 /* ActivityModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1792BBC6968916163ADD6 /* ActivityModels.swift */; };
+		5A7741A73B7972E97BCF820D /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = F1C15CBCA38F7C7C8ABAED75 /* AppIcon.icon */; };
 		5B8E74F041CEAC296AAE08DF /* LiveActivityScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F74879319943F1CDA5EFF /* LiveActivityScheduler.swift */; };
+		5CCF5EE78EB628086DE6E575 /* SwipeToDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BA3D49E524FD82FA36C5DB /* SwipeToDeleteTests.swift */; };
 		6213EB6F48B5ACA64D5346A0 /* WizardSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640D49DBF6B78EA17F65748B /* WizardSteps.swift */; };
+		62A9D1217156D4BB89AA66B3 /* HomeWidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB29F1E4E1E65701389F80 /* HomeWidgetViews.swift */; };
 		762DB5D247A167DB9E5C351D /* ReminderIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D105EF13B56CE342F9B598A9 /* ReminderIntents.swift */; };
 		78337161FB944EF322F45DFF /* Ripple.metal in Sources */ = {isa = PBXBuildFile; fileRef = 994B03AD0B801077306E9CBA /* Ripple.metal */; };
 		7AE85B31A4C721D6B6851B65 /* NextUpCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B7B2A06C4680C115FB6EF5 /* NextUpCard.swift */; };
@@ -37,6 +43,7 @@
 		A1A9DB3FCD6E17CC34C50754 /* AlarmScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28D0A2A71D8AB4E0B98DBEE /* AlarmScheduler.swift */; };
 		A89AB048ED46EF2E9E9715A6 /* ComposerDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832605E372675FD70C593FA /* ComposerDock.swift */; };
 		AA034A5EAEF6A555AF0D562A /* ActivityViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029055B063A8BB806938DD2 /* ActivityViews.swift */; };
+		AED67363B30F7F230E02E696 /* ReminderFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68ED9C2A94FAE63742BE51 /* ReminderFeed.swift */; };
 		BF807FDFE4F6F48D3C84D92B /* DraftPreviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEEB6C4FD14A9771334202E /* DraftPreviewCard.swift */; };
 		C5DE56545B6D862D4E6EC988 /* IntelligenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479A60446E13F2CFFAA150B1 /* IntelligenceService.swift */; };
 		C907482EB933AAEEEA906795 /* ActivityModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1792BBC6968916163ADD6 /* ActivityModels.swift */; };
@@ -46,6 +53,7 @@
 		E1EC53B10FE21C18B96D6158 /* RymyndWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE66F7F78C8C44FD2B683A5B /* RymyndWidgetsBundle.swift */; };
 		EDFAF2C022BE92010887DBAF /* RymyndWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2F3A9EB1D197B72F99006D9E /* RymyndWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EF1C4BD1E886FC4BCF8709DB /* RymyndApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7523BD399EB6CDAC79C2ACA1 /* RymyndApp.swift */; };
+		F1F8890B4484065A68795C1A /* HomeWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4053717264EAE7CF863082FC /* HomeWidgets.swift */; };
 		F238D320268C137BC2FBCCB8 /* ReminderIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D105EF13B56CE342F9B598A9 /* ReminderIntents.swift */; };
 		F7326982195B5DA224732B88 /* DeliveryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A313962865FF712654CC8C /* DeliveryCoordinator.swift */; };
 		FD6CA808FA6B76AF6ABFBD18 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D4F4C7547E20A8D401ABF /* Reminder.swift */; };
@@ -58,6 +66,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = C8FC2AAFED7ACB9930FCE82D;
 			remoteInfo = RymyndWidgets;
+		};
+		C6B017138A6B8595832BE273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A187A15EBA18E7A41ECE4764 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1083C7351A69C1B86E6B3CD7;
+			remoteInfo = Rymynd;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -85,18 +100,22 @@
 		29F5EB5AEA1601EF72EA446A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F3A9EB1D197B72F99006D9E /* RymyndWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = RymyndWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		33117A6120C68F1A48DAC93E /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		37BA3D49E524FD82FA36C5DB /* SwipeToDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToDeleteTests.swift; sourceTree = "<group>"; };
 		3832605E372675FD70C593FA /* ComposerDock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerDock.swift; sourceTree = "<group>"; };
 		3D776E39BD32628AC2F1725B /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
 		3E7A5CDE8860AA43A8737F42 /* WizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardView.swift; sourceTree = "<group>"; };
+		4053717264EAE7CF863082FC /* HomeWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidgets.swift; sourceTree = "<group>"; };
 		446F74879319943F1CDA5EFF /* LiveActivityScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityScheduler.swift; sourceTree = "<group>"; };
 		479A60446E13F2CFFAA150B1 /* IntelligenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntelligenceService.swift; sourceTree = "<group>"; };
 		48A9DA48FCC444FED38F4112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4D68ED9C2A94FAE63742BE51 /* ReminderFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderFeed.swift; sourceTree = "<group>"; };
 		5190FC02E15BB597F3538181 /* QuickTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickTimes.swift; sourceTree = "<group>"; };
 		545070D3F7833495368C1C71 /* Rymynd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rymynd.entitlements; sourceTree = "<group>"; };
 		55EE97539E1FFDC8CC2B1109 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5687AFE013690707726D3187 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		640D49DBF6B78EA17F65748B /* WizardSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardSteps.swift; sourceTree = "<group>"; };
 		7523BD399EB6CDAC79C2ACA1 /* RymyndApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RymyndApp.swift; sourceTree = "<group>"; };
+		757A8CAF23D13EE8D26A4947 /* SwipeToDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToDelete.swift; sourceTree = "<group>"; };
 		799AC4C8BF1C878A4A24639A /* ReminderDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDraft.swift; sourceTree = "<group>"; };
 		7FC1792BBC6968916163ADD6 /* ActivityModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModels.swift; sourceTree = "<group>"; };
 		8E61EA3EDAE943C8378B9678 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
@@ -110,11 +129,14 @@
 		BB2DDCDF28328F6F9D0C261C /* Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effects.swift; sourceTree = "<group>"; };
 		C52E82C076A74EEBA43F12AF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C5B7B2A06C4680C115FB6EF5 /* NextUpCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextUpCard.swift; sourceTree = "<group>"; };
+		C9A4EABA9983A1C6653F461E /* RymyndUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = RymyndUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D029055B063A8BB806938DD2 /* ActivityViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViews.swift; sourceTree = "<group>"; };
+		D0EB29F1E4E1E65701389F80 /* HomeWidgetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidgetViews.swift; sourceTree = "<group>"; };
 		D105EF13B56CE342F9B598A9 /* ReminderIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderIntents.swift; sourceTree = "<group>"; };
 		D34EF925D17ED7491B8313CE /* HeuristicParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeuristicParser.swift; sourceTree = "<group>"; };
 		D65C6811B423A0A6A68C8622 /* RymyndWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RymyndWidgets.entitlements; sourceTree = "<group>"; };
 		E8BC3FDA78385E249502BD38 /* DemoSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSupport.swift; sourceTree = "<group>"; };
+		F1C15CBCA38F7C7C8ABAED75 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		F2A313962865FF712654CC8C /* DeliveryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCoordinator.swift; sourceTree = "<group>"; };
 		F35FFB8F4E0414145494FDE2 /* ReminderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRow.swift; sourceTree = "<group>"; };
 		FE66F7F78C8C44FD2B683A5B /* RymyndWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RymyndWidgetsBundle.swift; sourceTree = "<group>"; };
@@ -134,8 +156,10 @@
 			children = (
 				7FC1792BBC6968916163ADD6 /* ActivityModels.swift */,
 				D029055B063A8BB806938DD2 /* ActivityViews.swift */,
+				D0EB29F1E4E1E65701389F80 /* HomeWidgetViews.swift */,
 				5687AFE013690707726D3187 /* Palette.swift */,
 				112D4F4C7547E20A8D401ABF /* Reminder.swift */,
+				4D68ED9C2A94FAE63742BE51 /* ReminderFeed.swift */,
 				D105EF13B56CE342F9B598A9 /* ReminderIntents.swift */,
 			);
 			path = Shared;
@@ -157,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				BD34B9442C3F40C532169302 /* Rymynd */,
+				814CAE68499ABEBB1554D8A5 /* RymyndUITests */,
 				8AAA98076B24B4FB8ADD7C4A /* RymyndWidgets */,
 				1FF3ADDFD48E66645FF66D88 /* Shared */,
 				BAA3B4D457DE91A6C61518C0 /* Products */,
@@ -193,10 +218,19 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		814CAE68499ABEBB1554D8A5 /* RymyndUITests */ = {
+			isa = PBXGroup;
+			children = (
+				37BA3D49E524FD82FA36C5DB /* SwipeToDeleteTests.swift */,
+			);
+			path = RymyndUITests;
+			sourceTree = "<group>";
+		};
 		8AAA98076B24B4FB8ADD7C4A /* RymyndWidgets */ = {
 			isa = PBXGroup;
 			children = (
 				B79C5B8BF8794E985B27AE9A /* AlarmLiveActivity.swift */,
+				4053717264EAE7CF863082FC /* HomeWidgets.swift */,
 				48A9DA48FCC444FED38F4112 /* Info.plist */,
 				AE442B1420243F6F84A07C68 /* ReminderLiveActivity.swift */,
 				D65C6811B423A0A6A68C8622 /* RymyndWidgets.entitlements */,
@@ -227,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				A08DA01ED59C45D73A9E6574 /* Rymynd.app */,
+				C9A4EABA9983A1C6653F461E /* RymyndUITests.xctest */,
 				2F3A9EB1D197B72F99006D9E /* RymyndWidgets.appex */,
 			);
 			name = Products;
@@ -253,6 +288,7 @@
 				110786BF114CB5449F732DD4 /* Components.swift */,
 				BB2DDCDF28328F6F9D0C261C /* Effects.swift */,
 				8E61EA3EDAE943C8378B9678 /* Haptics.swift */,
+				757A8CAF23D13EE8D26A4947 /* SwipeToDelete.swift */,
 				227B73BF9E9FA909FC923C48 /* Theme.swift */,
 			);
 			path = Design;
@@ -261,6 +297,7 @@
 		D7017FE18EFD72EFEFC2EA81 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F1C15CBCA38F7C7C8ABAED75 /* AppIcon.icon */,
 				29F5EB5AEA1601EF72EA446A /* Assets.xcassets */,
 				20526335EC34BF1678BB4958 /* Info.plist */,
 				545070D3F7833495368C1C71 /* Rymynd.entitlements */,
@@ -328,6 +365,24 @@
 			productReference = A08DA01ED59C45D73A9E6574 /* Rymynd.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4C3BDAABAA5D1CD0596F1278 /* RymyndUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E7B93BAD2B3A760FECFD486 /* Build configuration list for PBXNativeTarget "RymyndUITests" */;
+			buildPhases = (
+				AA0D3CF83EBB1DE98D832AE6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58D317626A4B87CDC2FC60A1 /* PBXTargetDependency */,
+			);
+			name = RymyndUITests;
+			packageProductDependencies = (
+			);
+			productName = RymyndUITests;
+			productReference = C9A4EABA9983A1C6653F461E /* RymyndUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C8FC2AAFED7ACB9930FCE82D /* RymyndWidgets */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AE208E8C501CD0003AB265F /* Build configuration list for PBXNativeTarget "RymyndWidgets" */;
@@ -358,6 +413,11 @@
 						DevelopmentTeam = C6RCPR99J8;
 						ProvisioningStyle = Automatic;
 					};
+					4C3BDAABAA5D1CD0596F1278 = {
+						DevelopmentTeam = C6RCPR99J8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1083C7351A69C1B86E6B3CD7;
+					};
 					C8FC2AAFED7ACB9930FCE82D = {
 						DevelopmentTeam = C6RCPR99J8;
 						ProvisioningStyle = Automatic;
@@ -380,6 +440,7 @@
 			targets = (
 				1083C7351A69C1B86E6B3CD7 /* Rymynd */,
 				C8FC2AAFED7ACB9930FCE82D /* RymyndWidgets */,
+				4C3BDAABAA5D1CD0596F1278 /* RymyndUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -389,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7741A73B7972E97BCF820D /* AppIcon.icon in Resources */,
 				CE2B9429DB2A250480684BDD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +475,7 @@
 				0CC410F9A75C427D33DDFB67 /* Haptics.swift in Sources */,
 				33EC16A9DEF7871951CFBC58 /* HeuristicParser.swift in Sources */,
 				DF2BAAADF56057B738D94F6D /* HomeView.swift in Sources */,
+				58A238DFEE33DE437C3903F4 /* HomeWidgetViews.swift in Sources */,
 				C5DE56545B6D862D4E6EC988 /* IntelligenceService.swift in Sources */,
 				5B8E74F041CEAC296AAE08DF /* LiveActivityScheduler.swift in Sources */,
 				7AE85B31A4C721D6B6851B65 /* NextUpCard.swift in Sources */,
@@ -423,12 +486,14 @@
 				4E97440D72A5E7411AAD6486 /* QuickTimes.swift in Sources */,
 				FD6CA808FA6B76AF6ABFBD18 /* Reminder.swift in Sources */,
 				2471C7197192FB9230D7634A /* ReminderDraft.swift in Sources */,
+				022CD6AC15E9F56159240C10 /* ReminderFeed.swift in Sources */,
 				F238D320268C137BC2FBCCB8 /* ReminderIntents.swift in Sources */,
 				3547AED78D72AFEDCDFCE047 /* ReminderRow.swift in Sources */,
 				8A56E8613DB88AA4FCC803F6 /* ReminderStore.swift in Sources */,
 				78337161FB944EF322F45DFF /* Ripple.metal in Sources */,
 				EF1C4BD1E886FC4BCF8709DB /* RymyndApp.swift in Sources */,
 				2787D318734F0AE0C3B5AD69 /* SettingsView.swift in Sources */,
+				0ACCE49B156C40B700CA61CE /* SwipeToDelete.swift in Sources */,
 				0926E391D8572D5BB9019164 /* Theme.swift in Sources */,
 				6213EB6F48B5ACA64D5346A0 /* WizardSteps.swift in Sources */,
 				9990146D112BF6F5C99F4818 /* WizardView.swift in Sources */,
@@ -442,17 +507,33 @@
 				C907482EB933AAEEEA906795 /* ActivityModels.swift in Sources */,
 				AA034A5EAEF6A555AF0D562A /* ActivityViews.swift in Sources */,
 				D1FDD81D26FCEF2BD7C7C280 /* AlarmLiveActivity.swift in Sources */,
+				62A9D1217156D4BB89AA66B3 /* HomeWidgetViews.swift in Sources */,
+				F1F8890B4484065A68795C1A /* HomeWidgets.swift in Sources */,
 				33DBF1F3910E73F69DD7438C /* Palette.swift in Sources */,
 				259C1947F8743161C8EF52F1 /* Reminder.swift in Sources */,
+				AED67363B30F7F230E02E696 /* ReminderFeed.swift in Sources */,
 				762DB5D247A167DB9E5C351D /* ReminderIntents.swift in Sources */,
 				33F8492774CEEB34BA1B0AC1 /* ReminderLiveActivity.swift in Sources */,
 				E1EC53B10FE21C18B96D6158 /* RymyndWidgetsBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA0D3CF83EBB1DE98D832AE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CCF5EE78EB628086DE6E575 /* SwipeToDeleteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		58D317626A4B87CDC2FC60A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1083C7351A69C1B86E6B3CD7 /* Rymynd */;
+			targetProxy = C6B017138A6B8595832BE273 /* PBXContainerItemProxy */;
+		};
 		B4D25244AE203988E48A1D5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C8FC2AAFED7ACB9930FCE82D /* RymyndWidgets */;
@@ -461,6 +542,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		01A1E2977B15D08D84EFBD6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rymynd.app.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Rymynd;
+			};
+			name = Debug;
+		};
 		02E9C937B9FC82350D8BF293 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,6 +575,23 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rymynd.app;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2D1091EE56A6488457964FBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rymynd.app.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Rymynd;
 			};
 			name = Release;
 		};
@@ -683,6 +798,15 @@
 			buildConfigurations = (
 				FB053339269D5FEA810C2445 /* Debug */,
 				02E9C937B9FC82350D8BF293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5E7B93BAD2B3A760FECFD486 /* Build configuration list for PBXNativeTarget "RymyndUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01A1E2977B15D08D84EFBD6B /* Debug */,
+				2D1091EE56A6488457964FBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

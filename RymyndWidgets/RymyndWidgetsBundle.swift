@@ -6,5 +6,7 @@ struct RymyndWidgetsBundle: WidgetBundle {
     var body: some Widget {
         ReminderLiveActivity()
         AlarmLiveActivity()
+        ComposeWidget()
+        TodayLineWidget()
     }
 }

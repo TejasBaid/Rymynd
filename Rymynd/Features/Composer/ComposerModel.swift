@@ -13,6 +13,8 @@ final class ComposerModel {
 
     var text = ""
     var isFocused = false
+    /// Bump to put the cursor in the field (e.g. from the Home Screen widget).
+    var focusRequest = 0
     private(set) var phase: Phase = .idle
     var draft = ReminderDraft()
     private(set) var streamingTitle = ""
